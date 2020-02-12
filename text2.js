@@ -1,9 +1,11 @@
-function add() {
-    var text = '1\n2,3';
-    var arr =text.split(/[\s,]+/);
-    console.log(arr);
-    var number = JSON.parse("[" + arr + "]");
-    console.log(number);
-    console.log(number.reduce((a, b) => a + b));
+function add(str) {
+    var res = str.replace(/\,/g," ");
+    console.log(res);
+    var arr = res.split(" ");
+    var total = 0;
+    for (var i =  0; i < arr.length; i++){
+        total += Number(arr[i]);
 }
-add();
+    console.log(total);
+}
+add("30,30,30");
